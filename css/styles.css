@@ -476,6 +476,54 @@ ul {
   height: 24px;
 }
 
+.subscribe {
+  margin-left: auto;
+}
+
+.subscribe-email {
+  padding: 8px 16px;
+  width: 264px;
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.footer-btn {
+  display: inline-flex;
+  margin-left: 24px;
+  padding: 8px 24px;
+
+  color: var(--color-primary);
+  background-color: var(--color-brand);
+  border: none;
+
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+
+  transition: background-color var(--timing-function);
+}
+
+.footer-btn:hover {
+  background-color: var(--color-pressed-state);
+}
+
+.footer-icon-subscribe {
+  fill: var(--color-primary);
+
+  margin-left: 16px;
+  width: 24px;
+  height: 24px;
+}
+
 /* Portfolio  */
 
 .section-portfolio {
@@ -619,12 +667,17 @@ ul {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
 
   width: 100%;
-  height: 100%;
+
   max-width: 408px;
-  max-height: 576px;
+  min-height: 576px;
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -661,4 +714,157 @@ ul {
   background-color: var(--color-pressed-state);
   fill: var(--color-primary);
   border: none;
+}
+
+/* Form  */
+
+.contact-form {
+}
+
+.contact-text {
+  text-align: center;
+  padding-top: 48px;
+  margin-bottom: 16px;
+
+  color: var(--color-title);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+
+  color: #8e8f99;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.form-label:nth-child(n + 2) {
+  margin-top: 8px;
+}
+
+.form-label:last-child {
+  margin-bottom: 0;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-input {
+  padding-left: 38px;
+  width: 360px;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border var(--timing-function);
+}
+
+.form-input:focus {
+  border: 1px solid var(--color-brand);
+}
+
+.form-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  fill: var(--color-title);
+
+  transition: fill var(--timing-function);
+}
+
+.form-input:focus + .form-icon {
+  fill: var(--color-brand);
+}
+
+.form-textarea {
+  resize: none;
+
+  width: 360px;
+  height: 120px;
+  padding-left: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border var(--timing-function);
+}
+
+.form-textarea:focus {
+  border: 1px solid var(--color-brand);
+}
+.form-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+.contact-form-btn {
+  display: flex;
+  align-content: center;
+  margin: 24px auto 0 auto;
+  width: 169px;
+  justify-content: center;
+}
+
+.form-accept {
+  color: #757575;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+.form-accept-chekbox {
+  position: absolute;
+  appearance: none;
+}
+.checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+
+  border: 1.25px solid var(--color-title);
+  border-radius: 2px;
+
+  background-color: var(--color-primary);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: 50% 50%;
+}
+
+.form-accept-chekbox:checked + .checkbox {
+  background-color: var(--color-pressed-state);
+  border: 1.25px solid var(--color-pressed-state);
+}
+
+.form-accept-chekbox:checked + .checkbox + .checked-icon {
+  fill: var(--color-pressed-state);
+}
+
+.checked-icon {
+  width: 10px;
+  height: 8px;
+  fill: var(--color-primary);
+}
+
+.form-accept-text {
+  padding-left: 8px;
+}
+
+.web-privacy {
+  color: var(--color-brand);
+  text-decoration: underline;
 }
